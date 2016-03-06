@@ -1,6 +1,8 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
 
+{{ partial "sticky_hello_bar_top.html" . }}
+
 {{if .Params.image}}
 <header class="main-header post-head" style="background-image: url({{ $baseurl }}{{.Params.image}})">
   <nav class="main-nav overlay clearfix">
@@ -42,7 +44,7 @@
          {{ end }}
         </section>
     </header>
-  
+
     <section class="post-content">
       {{ .Content }}
     </section>

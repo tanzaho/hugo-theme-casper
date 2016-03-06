@@ -1895,3 +1895,229 @@ body:not(.post-template) .post-title {
    End of file. Animations should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
    ========================================================================== */
+
+
+/*==============================
+Addition by Jice
+===============================*/
+
+.article-bar {
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	-ms-transition:all 0.2s ease;
+	-o-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+	/*-webkit-transform:translate3d(0, -80px, 0);
+	-moz-transform:translate3d(0, -80px, 0);
+	-ms-transform:translate3d(0, -80px, 0);
+	-o-transform:translate3d(0, -80px, 0);
+	transform:translate3d(0, -80px, 0);*/
+	background-color:#fff;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	z-index:99;
+	padding:10px 0;
+	box-shadow:0 1px 1px rgba(0,0,0,0.16);
+	display:none;
+}
+.article-bar:before,.article-bar:after {
+	content:" ";
+	display:table
+}
+.article-bar:after {
+	clear:both
+}
+.article-bar.active {
+	-webkit-transform:translate3d(0, 0, 0);
+	-moz-transform:translate3d(0, 0, 0);
+	-ms-transform:translate3d(0, 0, 0);
+	-o-transform:translate3d(0, 0, 0);
+	transform:translate3d(0, 0, 0)
+}
+.article-bar header {
+	float:left;
+	padding:0px 0;
+	margin-left:30px
+}
+.article-bar header h2 {
+	font-size:16px;
+	line-height:1;
+	margin:0;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+
+	display:inline-block;
+}
+.article-bar header h2 em {
+	color:#bbb;
+	font-family:"Georgia";
+	font-weight:normal;
+	margin-right:8px
+}
+.article-bar .control {
+	float:right
+}
+.article-bar .button {
+	background-color:#fff;
+	border-radius:2px;
+	border:1px solid #ddd;
+	box-shadow:0 1px 1px rgba(0,0,0,0.16);
+	color:#484d50;
+	display:inline-block;
+	font-weight:bold;
+	font-size:14px;
+	line-height:1;
+	padding:8px 16px;
+	margin-right:10px;
+	vertical-align:middle;
+	cursor:pointer;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+.article-bar .button.primary {
+	background-color:#4A90E2;
+	border-color:transparent transparent #2171ce;
+	color:#fff
+}
+.article-bar .button.primary:hover {
+	background-color:#64a0e6
+}
+.article-bar .button-link {
+	border:none;
+	box-shadow:none
+}
+.article-bar .button-icon {
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	color:#484d50;
+	display:inline-block;
+	margin:0 5px;
+	padding:7px 15px
+}
+.article-bar .button-icon i {
+	font-size:16px;
+	font-style:normal;
+	line-height:1;
+	vertical-align:middle
+}
+
+@media screen and (max-width: 600px) {
+
+  .article-bar .button-icon {
+    display: none;
+  }
+	.article-bar header h2 em {
+		font-size:12px;
+	}
+	.article-bar header h2 {
+		font-size:12px;
+	}
+	.article-bar .button {
+		font-size:10px;
+    padding-left: 5px;
+    padding-right: 5px;
+	}
+}
+
+
+
+.post-next {
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	-ms-transition:all 0.2s ease;
+	-o-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+	-webkit-transform:translate3d(0, -150px, 0);
+	-moz-transform:translate3d(0, -150px, 0);
+	-ms-transform:translate3d(0, -150px, 0);
+	-o-transform:translate3d(0, -150px, 0);
+	transform:translate3d(0, -150px, 0);
+	position:fixed;
+	top:50%;
+	right:0;
+	z-index:99;
+	background-color:#f9f9f9;
+	box-shadow:0px 2px 4px rgba(0,0,0,0.16);
+	text-align:center;
+	width:44px;
+	opacity:0.6;
+	display:none
+}
+.post-next:hover {
+	box-shadow:0px 3px 12px -2px rgba(0,0,0,0.2);
+	opacity:1
+}
+.post-next label {
+	color:#ccc;
+	font-size:12px;
+	font-weight:bold;
+	text-transform:uppercase;
+	line-height:1;
+	margin-bottom:15px
+}
+.post-next header {
+	margin:0 0 30px
+}
+.post-next header a {
+	color:#484d50
+}
+.post-next header h2 {
+	font-size:1.24rem;
+	line-height:1.1
+}
+.post-next .button {
+	background-color:#fff;
+	box-shadow:0 1px 1px rgba(0,0,0,0.16);
+	border:1px solid #ddd;
+	color:#484d50;
+	padding:8px 16px;
+	font-size:14px;
+	line-height:1;
+	font-weight:bold
+}
+.post-next .arrw {
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	cursor:pointer;
+	padding:20px 15px
+}
+.post-next .arrw i {
+	font-style:normal;
+	font-size:48px;
+	line-height:1;
+	font-weight:lighter
+}
+.post-next .content {
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	-ms-transition:all 0.2s ease;
+	-o-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+	overflow:hidden;
+	padding:0 15px;
+	height:0;
+	opacity:0
+}
+.post-next.active {
+	width:200px;
+	opacity:1
+}
+.post-next.active .content {
+	height:240px;
+	opacity:1
+}
+@media only screen and (min-width: 40.063em) {
+	.post-next {
+		display:block
+	}
+}

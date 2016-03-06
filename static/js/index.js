@@ -54,3 +54,20 @@
 
     };
 })(jQuery);
+
+
+
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  var max = 200;
+  var max = $('.content').offset().top;
+  if (y > max) {
+    $('#post-article-bar').fadeIn();
+  } else {
+    $('#post-article-bar').fadeOut();
+  }
+
+  if ( (y % 500) == 0 ){
+    $("#newsletter-modal-trigger").effect( "shake", {times:3, distance: 5}, 1000 );
+  }
+});
