@@ -56,7 +56,7 @@
 })(jQuery);
 
 
-
+// Shake the 'subscribe to newsletter' CTA
 $(document).scroll(function() {
   var y = $(this).scrollTop();
   // var max = 200;
@@ -67,7 +67,7 @@ $(document).scroll(function() {
     $('#post-article-bar').fadeOut();
   }
 
-  if ( (y % 600) == 0 ){
+  if ( (y % 800) == 0 || (y % 800) == 1 || (y % 800) == 2){
     $("#newsletter-modal-trigger").effect( "shake", {times:3, distance: 5}, 1000 );
   }
 });
