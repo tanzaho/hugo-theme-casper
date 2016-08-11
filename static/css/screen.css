@@ -1080,6 +1080,15 @@ body:not(.post-template) .post-title {
     display: none;
 }
 
+
+/* Keep images floating left on text exceprt. */
+.post-excerpt img{
+    float: left;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    max-width: 200px;
+}
+
 /* Keep images centered, and allow images wider than the main
    text column to break out. */
 .post-content img {
