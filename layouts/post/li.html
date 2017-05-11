@@ -1,13 +1,23 @@
 {{ $baseurl := .Site.BaseURL }}
+
+{{if .Params.canonical }}
+    {{ $.Scratch.Set "linkToArticle" .Params.canonical }}
+    {{ $.Scratch.Set "target" "_blank" }}
+{{ else }}
+    {{ $.Scratch.Set "linkToArticle" .RelPermalink }}
+    {{ $.Scratch.Set "target" "_self" }}
+{{ end }}
+
+
 <article class="post {{ .Section }}">
     <header class="post-header">
-        <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h2 class="post-title"><a href="{{ $.Scratch.Get "linkToArticle" }}" target="{{ $.Scratch.Get "target" }}">{{ .Title }}</a></h2>
     </header>
     <section class="post-excerpt">
         {{if .Params.image}}
-        <a href="{{ .RelPermalink }}"><img src="{{ $baseurl }}{{.Params.image}}"></a>
+        <a href="{{ $.Scratch.Get "linkToArticle" }}" target="{{ $.Scratch.Get "target" }}"><img src="{{ $baseurl }}{{.Params.image}}"></a>
         {{end}}
-        <p>{{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">&raquo;</a></p>
+        <p>{{ .Summary }} <a class="read-more" href="{{$.Scratch.Get "linkToArticle"}}" target="{{ $.Scratch.Get "target" }}">&raquo;</a></p>
     </section>
     <footer class="post-meta">
         {{if .Site.Params.logo }}
