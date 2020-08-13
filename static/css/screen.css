@@ -1986,7 +1986,8 @@ Addition by Jice
 	margin-right:10px;
 	vertical-align:middle;
 	cursor:pointer;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    white-space: nowrap;
 }
 .article-bar a{
   text-decoration: none;

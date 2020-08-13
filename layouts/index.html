@@ -5,7 +5,7 @@
 {{else}}
 <header class="main-header no-cover">
 {{end}}
-   
+
     <nav class="main-nav overlay clearfix">
         {{ if .Site.Params.logo }}
             <a class="blog-logo" href="{{ .Permalink }}"><img src="{{.Site.BaseURL}}{{ .Site.Params.logo }}" alt="Blog Logo" /></a>  <a class="blog-logo" href="{{ .Permalink }}"><div style="padding-left: 7px;text-align: left; color: #fff;">{{ .Site.Title }} (Home)</div></a>
@@ -47,7 +47,10 @@
 
 <main id="content" class="content" role="main">
 
-    {{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
+
+    {{ $pages := site.RegularPages  }}
+    {{ $paginator := .Paginate $pages }}
+
 
     <div class="extra-pagination inner">
         {{ partial "pagination.html" $paginator}}
